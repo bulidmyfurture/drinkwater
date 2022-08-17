@@ -7,7 +7,8 @@ from requests import get, post
 import os
 import random
 
-time1 = datetime.now().strftime('%H:%M')+timedelta(hours=8)
+timenow = (datetime.utcnow() + timedelta(hours=8)) 
+time1 = timenow.strftime('%H:%M')
 
 app_id = os.environ["APP_ID"]
 app_secret = os.environ["APP_SECRET"]
