@@ -13,7 +13,7 @@ time1 = timenow.strftime('%H:%M')
 app_id = os.environ["APP_ID"]
 app_secret = os.environ["APP_SECRET"]
 
-user_id = ["oYnjO6uwFCUxabv1khTNgb2-j5g8"]
+user_id = ["oYnjO6uwFCUxabv1khTNgb2-j5g8","oYnjO6iKRJmszyyQGC3SKdm_Wah8"]
 
 template_id = ["7RvPipGrMGGeqHSG69vAACZP1xcApiHacKl7oP_xy0k"]
 
@@ -33,4 +33,5 @@ client = WeChatClient(app_id, app_secret)
 wm = WeChatMessage(client)
 data = {"today": {"value": time1}, "words": {"value": get_words(), "color": get_random_color()}}
 res = wm.send_template(user_id[0], template_id[0], data)
+res1 = wm.send_template(user_id[1], template_id[0], data)
 print(res)
