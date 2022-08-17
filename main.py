@@ -1,4 +1,4 @@
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 import math
 from wechatpy import WeChatClient
 from wechatpy.client.api import WeChatMessage, WeChatTemplate
@@ -7,7 +7,7 @@ from requests import get, post
 import os
 import random
 
-time1 = datetime.now().strftime('%H:%M')
+time1 = datetime.now().strftime('%H:%M')+timedelta(hours=8)
 
 app_id = os.environ["APP_ID"]
 app_secret = os.environ["APP_SECRET"]
